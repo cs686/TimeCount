@@ -7,12 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "UIButton+countDown.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *countDownBtn;
 
 @end
 
 @implementation ViewController
+- (IBAction)countDownBtnTapped:(UIButton *)sender {
+    
+    [_countDownBtn startWithTime:5 title:@"获取验证码" countDownTitle:@"s" mainColor:[UIColor colorWithRed:84/255.0 green:180/255.0 blue:98/255.0 alpha:1.0f] countColor:[UIColor colorWithRed:84/255.0 green:180/255.0 blue:98/255.0 alpha:1.0f]];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
